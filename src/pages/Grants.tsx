@@ -1,8 +1,15 @@
+import { Link } from 'react-router-dom';
+
 export default function Grants() {
   return (
     <>
-      {/* Page Header */}
-      <section className="page-header">
+      {/* Page Header with background image */}
+      <section className="page-header page-header--image">
+        <img
+          src="/student-studying.jpg"
+          alt="Student studying in the library"
+          className="page-header__bg"
+        />
         <div className="container">
           <h1 className="page-header__title">Grants &amp; Scholarships</h1>
           <p className="page-header__subtitle">
@@ -11,138 +18,115 @@ export default function Grants() {
         </div>
       </section>
 
-      {/* Grants listing */}
-      <section className="section">
+      {/* Grants as a feature list — not cards */}
+      <section className="feature-list section">
         <div className="container">
-          <div className="card-grid">
-            {/* Grant 1 */}
-            <div className="card">
-              <span className="card__label">Need-Based</span>
-              <h3 className="card__title">General Assistance Grant</h3>
-              <div className="card__body">
+          <h2>Available Programs</h2>
+          <div className="feature-list__items">
+            <div className="feature-list__item">
+              <span className="feature-list__label">Need-Based</span>
+              <div className="feature-list__text">
+                <h3>General Assistance Grant</h3>
                 <p>
-                  Open to all currently enrolled UC Berkeley undergraduate and
-                  graduate students demonstrating financial need. Awards are
-                  intended to offset educational expenses such as tuition, books,
-                  and housing.
+                  Open to all enrolled undergraduate and graduate students
+                  demonstrating financial need. Awards offset tuition, books,
+                  and housing expenses.
                 </p>
               </div>
-              <div className="card__footer">
-                <strong>Eligibility:</strong> All enrolled students with
-                demonstrated financial need.
-              </div>
+              <span className="feature-list__arrow" />
             </div>
 
-            {/* Grant 2 */}
-            <div className="card">
-              <span className="card__label">Merit</span>
-              <h3 className="card__title">Academic Excellence Scholarship</h3>
-              <div className="card__body">
+            <div className="feature-list__item">
+              <span className="feature-list__label">Merit</span>
+              <div className="feature-list__text">
+                <h3>Academic Excellence Scholarship</h3>
                 <p>
-                  Recognizes outstanding academic achievement among UC Berkeley
-                  students. Applicants are evaluated on GPA, course rigor, and a
-                  personal statement describing their academic goals.
+                  Recognizes outstanding academic achievement. Evaluated on GPA,
+                  course rigor, and a personal statement. Requires minimum 3.5
+                  GPA.
                 </p>
               </div>
-              <div className="card__footer">
-                <strong>Eligibility:</strong> Undergraduate students with a
-                minimum 3.5 GPA.
-              </div>
+              <span className="feature-list__arrow" />
             </div>
 
-            {/* Grant 3 */}
-            <div className="card">
-              <span className="card__label">Community</span>
-              <h3 className="card__title">Community Service Award</h3>
-              <div className="card__body">
+            <div className="feature-list__item">
+              <span className="feature-list__label">Community</span>
+              <div className="feature-list__text">
+                <h3>Community Service Award</h3>
                 <p>
-                  Supports students who have demonstrated sustained commitment
-                  to community service and civic engagement. Priority is given
-                  to applicants whose service directly benefits the Berkeley
-                  community.
+                  Supports students with sustained commitment to community
+                  service and civic engagement. Requires 50+ documented service
+                  hours.
                 </p>
               </div>
-              <div className="card__footer">
-                <strong>Eligibility:</strong> Students with 50+ documented
-                community service hours.
-              </div>
+              <span className="feature-list__arrow" />
             </div>
 
-            {/* Grant 4 */}
-            <div className="card">
-              <span className="card__label">Emergency</span>
-              <h3 className="card__title">Emergency Financial Aid</h3>
-              <div className="card__body">
+            <div className="feature-list__item">
+              <span className="feature-list__label">Emergency</span>
+              <div className="feature-list__text">
+                <h3>Emergency Financial Aid</h3>
                 <p>
-                  Provides rapid-response funding for students facing unexpected
-                  financial hardship—medical emergencies, housing insecurity,
-                  food insecurity, or other urgent needs.
+                  Rapid-response funding for students facing unexpected
+                  hardship—medical emergencies, housing insecurity, food
+                  insecurity, or other urgent needs.
                 </p>
               </div>
-              <div className="card__footer">
-                <strong>Eligibility:</strong> Any enrolled student experiencing
-                an emergency financial situation.
-              </div>
+              <span className="feature-list__arrow" />
             </div>
 
-            {/* Grant 5 */}
-            <div className="card">
-              <span className="card__label">Research</span>
-              <h3 className="card__title">Undergraduate Research Grant</h3>
-              <div className="card__body">
+            <div className="feature-list__item">
+              <span className="feature-list__label">Research</span>
+              <div className="feature-list__text">
+                <h3>Undergraduate Research Grant</h3>
                 <p>
-                  Funds independent research projects pursued by undergraduate
-                  students across all disciplines. Grants cover materials,
-                  travel, and conference presentation costs.
+                  Funds independent research projects across all disciplines.
+                  Covers materials, travel, and conference costs. Requires
+                  faculty sponsorship.
                 </p>
               </div>
-              <div className="card__footer">
-                <strong>Eligibility:</strong> Undergraduate students with
-                faculty sponsorship.
-              </div>
+              <span className="feature-list__arrow" />
             </div>
 
-            {/* Grant 6 */}
-            <div className="card">
-              <span className="card__label">Leadership</span>
-              <h3 className="card__title">Student Leadership Scholarship</h3>
-              <div className="card__body">
+            <div className="feature-list__item">
+              <span className="feature-list__label">Leadership</span>
+              <div className="feature-list__text">
+                <h3>Student Leadership Scholarship</h3>
                 <p>
-                  Recognizes students who demonstrate exceptional leadership
-                  through student organizations, campus governance, or community
-                  initiatives.
+                  Recognizes exceptional leadership through student
+                  organizations, campus governance, or community initiatives.
                 </p>
               </div>
-              <div className="card__footer">
-                <strong>Eligibility:</strong> Students holding a leadership role
-                in a registered campus organization.
-              </div>
+              <span className="feature-list__arrow" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Application info */}
-      <section className="section section--alt">
-        <div className="container prose" style={{ maxWidth: 720 }}>
+      {/* How to Apply — split with image */}
+      <section className="split split--reverse split--blue">
+        <div className="split__image">
+          <img
+            src="/students-collaborating.jpg"
+            alt="Students collaborating on campus"
+          />
+        </div>
+        <div className="split__content">
           <h2>How to Apply</h2>
           <p>
             Applications for each grant cycle are announced at the beginning of
             every semester. All applications are submitted through the ASUC
             grants portal and reviewed by the Foundation's awards committee.
           </p>
-          <ol>
-            <li>Review the eligibility criteria for each grant above.</li>
-            <li>
-              Prepare supporting documents (transcripts, personal statement,
-              etc.).
-            </li>
-            <li>Submit your application before the published deadline.</li>
-            <li>
-              Decisions are communicated via email within four weeks of the
-              deadline.
-            </li>
-          </ol>
+          <p style={{ paddingLeft: '1.25rem', borderLeft: '3px solid var(--california-gold)' }}>
+            <strong>1.</strong> Review the eligibility criteria for each grant.<br />
+            <strong>2.</strong> Prepare supporting documents (transcripts, personal statement).<br />
+            <strong>3.</strong> Submit your application before the published deadline.<br />
+            <strong>4.</strong> Decisions are communicated via email within four weeks.
+          </p>
+          <Link to="/contact" className="btn btn--primary" style={{ marginTop: '0.5rem' }}>
+            Questions? Contact Us
+          </Link>
         </div>
       </section>
     </>

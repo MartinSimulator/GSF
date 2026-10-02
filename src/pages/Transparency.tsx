@@ -1,8 +1,15 @@
+import { Link } from 'react-router-dom';
+
 export default function Transparency() {
   return (
     <>
       {/* Page Header */}
-      <section className="page-header">
+      <section className="page-header page-header--image">
+        <img
+          src="/meeting-room.jpg"
+          alt="Foundation board meeting"
+          className="page-header__bg"
+        />
         <div className="container">
           <h1 className="page-header__title">Transparency</h1>
           <p className="page-header__subtitle">
@@ -11,15 +18,15 @@ export default function Transparency() {
         </div>
       </section>
 
-      {/* Overview */}
-      <section className="section">
-        <div className="container prose" style={{ maxWidth: 800 }}>
+      {/* Financial overview — editorial */}
+      <section className="editorial">
+        <div className="container">
           <h2>Financial Overview</h2>
           <p>
-            The Foundation is funded through a portion of ASUC student fees.
-            We are committed to full transparency in how these funds are
-            collected, allocated, and spent. The tables below summarize our
-            financial activity for the most recent academic year.
+            The Foundation is funded through a portion of ASUC student fees. We
+            are committed to full transparency in how these funds are collected,
+            allocated, and spent. The table below summarizes our financial
+            activity for the most recent academic year.
           </p>
         </div>
       </section>
@@ -85,9 +92,15 @@ export default function Transparency() {
         </div>
       </section>
 
-      {/* Meeting minutes & reports */}
-      <section className="section">
-        <div className="container prose" style={{ maxWidth: 800 }}>
+      {/* Meeting minutes & policies — split */}
+      <section className="split split--reverse">
+        <div className="split__image">
+          <img
+            src="/campus-hero.jpg"
+            alt="UC Berkeley campus"
+          />
+        </div>
+        <div className="split__content">
           <h2>Meeting Minutes</h2>
           <p>
             All Foundation board meetings are open to the public. Minutes are
@@ -96,16 +109,19 @@ export default function Transparency() {
           </p>
           <p>
             To request copies of meeting minutes or audited financial
-            statements, please contact us at{' '}
+            statements, please email{' '}
             <a href="mailto:grants@asuc.org">grants@asuc.org</a>.
           </p>
 
-          <h2>Policies &amp; Bylaws</h2>
+          <h2 style={{ marginTop: '2rem' }}>Policies &amp; Bylaws</h2>
           <p>
             The Foundation operates under the bylaws of the ASUC. Copies of our
             governing documents, conflict-of-interest policies, and grant
             disbursement procedures are available upon request.
           </p>
+          <Link to="/contact" className="link-arrow">
+            Request documents
+          </Link>
         </div>
       </section>
     </>

@@ -11,8 +11,13 @@ export default function Contact() {
 
   return (
     <>
-      {/* Page Header */}
-      <section className="page-header">
+      {/* Page Header with background image */}
+      <section className="page-header page-header--image">
+        <img
+          src="/campus-hero.jpg"
+          alt="UC Berkeley campus"
+          className="page-header__bg"
+        />
         <div className="container">
           <h1 className="page-header__title">Contact Us</h1>
           <p className="page-header__subtitle">
@@ -21,6 +26,7 @@ export default function Contact() {
         </div>
       </section>
 
+      {/* Contact split — info left, form right */}
       <section className="section">
         <div className="container">
           <div className="contact-grid">
@@ -117,6 +123,28 @@ export default function Contact() {
               )}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Map / campus image */}
+      <section className="split split--blue">
+        <div className="split__image">
+          <img
+            src="/asuc-image.webp"
+            alt="ASUC office entrance at Eshleman Hall"
+          />
+        </div>
+        <div className="split__content">
+          <h2>Find Us on Campus</h2>
+          <p>
+            Our office is located in Eshleman Hall, the heart of student life
+            at UC Berkeley. Drop by during office hours or email us anytime.
+          </p>
+          <p>
+            <strong>400 Eshleman Hall</strong><br />
+            University of California, Berkeley<br />
+            Berkeley, CA 94720
+          </p>
         </div>
       </section>
     </>
